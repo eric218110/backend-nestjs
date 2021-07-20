@@ -1,6 +1,6 @@
 import { Logger } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
-import { AppModule } from '../../modules/app/app.module'
+import { AppModule } from '@modules/app/app.module'
 
 async function bootstrap() {
   const SERVER_PORT =
@@ -9,7 +9,7 @@ async function bootstrap() {
   await app
     .listen(SERVER_PORT)
     .then(() =>
-      Logger.log(`Server running in port ${SERVER_PORT}`, 'ServerApplication')
+      Logger.log(`server running in port ${SERVER_PORT}`, 'ServerApplication')
     )
 }
 
