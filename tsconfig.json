@@ -1,16 +1,20 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "outDir": "./dist",
-        "rootDir": "./src",
-        "removeComments": true,
-        "strict": true,
-        "noImplicitAny": true,
-        "esModuleInterop": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
-    }
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "isolatedModules": true,
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "removeComments": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }
