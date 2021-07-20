@@ -7,6 +7,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .js,.ts --fix .",
+    "prebuild": "rimraf dist",
+    "preci-local": "rimraf coverage",
+    "ci-local": "npm test -- --coverage",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "start:dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules --no-notify --clear --quiet ./src/main/server/index.ts",
     "postinstall": "husky install"
@@ -39,6 +42,8 @@
     "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.3",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5"
   }
