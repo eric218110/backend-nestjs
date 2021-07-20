@@ -4,7 +4,7 @@
       "@babel/preset-env",
       {
         "targets": {
-          "node": "14.12"
+          "node": "current"
         }
       }
     ],
@@ -23,5 +23,9 @@
         "loose": true
       }
     ]
+  ],
+  "ignore": [
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }
