@@ -9,7 +9,7 @@ async function bootstrap() {
   await app
     .listen(SERVER_PORT)
     .then(() =>
-      Logger.log(`server running in port ${SERVER_PORT}`, 'ServerApplication')
+      Logger.log(`Server running in port ${SERVER_PORT}`, 'ServerApplication')
     )
 }
 
