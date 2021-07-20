@@ -4,14 +4,21 @@
     "jest": true
   },
   "plugins": [
-    "prettier"
+    "prettier",
+    "plugin:prettier/recommended",
+    "@typescript-eslint/eslint-plugin"
   ],
   "extends": "standard-with-typescript",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "prettier/prettier": "error",
     "@typescript-eslint/no-use-before-define": [
       "error"
