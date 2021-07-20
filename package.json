@@ -1,6 +1,10 @@
 {
   "name": "ms-user",
   "version": "1.0.0",
+  "author": {
+    "name": "eric218110"
+  },
+  "repository": "git://github.com/eric218110/backend-nestjs.git",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
