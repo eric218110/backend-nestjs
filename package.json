@@ -11,12 +11,6 @@
     "start:dev": "ts-node-dev -r tsconfig-paths/register --respawn --ignore-watch node_modules --no-notify --clear --quiet ./src/main/server/index.ts",
     "postinstall": "husky install"
   },
-  "lint-staged": {
-    "**/*.ts": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
-    ]
-  },
   "dependencies": {
     "@nestjs/common": "^8.0.4",
     "@nestjs/core": "^8.0.4",
