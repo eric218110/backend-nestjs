@@ -1,0 +1,21 @@
+{
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "space-before-function-paren": "off"
+  }
+}
