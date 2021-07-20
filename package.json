@@ -12,7 +12,7 @@
     "postinstall": "husky install"
   },
   "lint-staged": {
-    "src/**/*": [
+    "**/*.ts": [
       "yarn lint --fix",
       "yarn test --findRelatedTests --bail"
     ]
