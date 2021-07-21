@@ -18,13 +18,15 @@
 - Build com babel
 - ts-node-dev para desenvolvimento
 - Uso de path alias com typescript, configurado para test ou build
+
 ```typescript
 // Exemplo
 // Uso do @module/*  ao inves de ../../../app.module
 import { AppModule } from '@module/app.module'
 ...
-``` 
-- Husky, conventional commits, lint staged, eslint. Ações configuradas: 
+```
+
+- Husky, conventional commits, lint staged, eslint. Ações configuradas:
 
 ```markdown
 - commit-msg: Executado para validar a mensagem do commit
@@ -35,7 +37,6 @@ import { AppModule } from '@module/app.module'
 ---
 
 ## Script
-
 
 ### Start development mode
 
@@ -59,4 +60,10 @@ $ yarn test
 
 ```bash
 $ yarn build
+```
+
+### Start app
+
+```bash
+$ yarn start
 ```
