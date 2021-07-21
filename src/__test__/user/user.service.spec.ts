@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing'
-import { AppService } from '@modules/app/app.service'
+import { AppService } from '@modules/user/user.service'
 
-describe('AppService', () => {
+describe('UserService', () => {
   let sut: AppService
 
   beforeAll(async () => {
