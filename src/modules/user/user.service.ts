@@ -1,10 +1,13 @@
 import { Injectable } from '@nestjs/common'
+import { AddNewUser } from 'domain/useCases/user/AddNewUser'
 
 @Injectable()
-export class UserService {
-  public getMessage() {
+export class UserService implements AddNewUser.Protocol {
+  public addUser({ email, name }: AddNewUser.Params): AddNewUser.Response {
     return {
-      hello: 'world'
+      id: 'id',
+      email,
+      name
     }
   }
 }
