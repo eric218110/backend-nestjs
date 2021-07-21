@@ -1,14 +1,14 @@
 import { Test } from '@nestjs/testing'
-import { AppService } from '@modules/user/user.service'
+import { UserService } from '@modules/user/user.service'
 
 describe('UserService', () => {
-  let sut: AppService
+  let sut: UserService
 
   beforeAll(async () => {
     const refModule = await Test.createTestingModule({
-      providers: [AppService]
+      providers: [UserService]
     }).compile()
-    sut = refModule.get(AppService)
+    sut = refModule.get(UserService)
   })
 
   it('should be defined', () => {
