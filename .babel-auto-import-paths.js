@@ -1,6 +1,6 @@
 const tsconfig = require('./tsconfig.json')
 
-module.exports = autoImportPaths = () => {
+const autoImportPaths = () => {
   const { paths, rootDir } = tsconfig.compilerOptions
   let objPath
   let result = []
@@ -10,20 +10,24 @@ module.exports = autoImportPaths = () => {
     objPath !== null;
     objPath = Object.getPrototypeOf(objPath)
   ) {
-    let resultPaths = result.concat(Object.getOwnPropertyNames(objPath))
-    for (const path of resultPaths) {
-      if (path.indexOf('@', 0) === 0) {
-        let value = paths[path][0].replace(/[.]+/g, '')
-        value = value.replace(/[*]+/g, '')
-        value = `./${rootDir}${value}`
-        let index = path.replace(/[*]+/g, '')
-        index = index.replace(/[/]+/g, '')
-        autoPath = {
-          ...autoPath,
-          [index]: value
+    if (result !== null) {
+      let resultPaths = result.concat(Object.getOwnPropertyNames(objPath))
+      for (const path of resultPaths) {
+        if (path.indexOf('@', 0) === 0) {
+          let value = paths[path][0].replace(/[.]+/g, '')
+          value = value.replace(/[*]+/g, '')
+          value = `./${rootDir}${value}`
+          let index = path.replace(/[*]+/g, '')
+          index = index.replace(/[/]+/g, '')
+          autoPath = {
+            ...autoPath,
+            [index]: value
+          }
         }
       }
     }
   }
   return autoPath
 }
+
+module.exports = autoImportPaths
